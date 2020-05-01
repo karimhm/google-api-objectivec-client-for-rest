@@ -16,8 +16,12 @@
 #import <Foundation/Foundation.h>
 
 #ifndef SKIP_GTLR_DEFINES
-  #import "GTLRDefines.h"
-#endif
+  #if SWIFT_PACKAGE
+    #import "../GTLRDefines.h"
+  #else
+    #import "GTLRDefines.h"
+  #endif // SWIFT_PACKAGE
+#endif // SKIP_GTLR_DEFINES
 
 NS_ASSUME_NONNULL_BEGIN
 

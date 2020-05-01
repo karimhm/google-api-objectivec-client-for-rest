@@ -18,7 +18,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GTLRDefines.h"
+#if SWIFT_PACKAGE
+  #import "../GTLRDefines.h"
+#else
+  #import "GTLRDefines.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
